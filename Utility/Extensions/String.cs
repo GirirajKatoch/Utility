@@ -22,5 +22,17 @@ namespace System
             catch { }
             return result;
         }
+
+        public static string MaximumLength(this string s, int length)
+        {
+            return s.MaximumLength(length, String.Empty);
+        }
+
+        public static string MaximumLength(this string s, int length, string ellipsis)
+        {
+            if (String.IsNullOrWhiteSpace(s)) { return s; }
+
+            return s.Length > length ? s.Substring(0, length - ellipsis.Length) + ellipsis : s;
+        }
     }
 }
