@@ -31,6 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -44,6 +46,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\Generic\IEnumerable.cs" />
@@ -53,7 +56,6 @@
     <Compile Include="Configuration\Provider\ProviderSection.cs" />
     <Compile Include="Events\EventArgs.cs" />
     <Compile Include="Events\Extensions.cs" />
-    <Compile Include="Extensions\DateTime.cs" />
     <Compile Include="Extensions\String.cs" />
     <Compile Include="Extensions\TimeSpan.cs" />
     <Compile Include="Patterns\Singleton.cs" />

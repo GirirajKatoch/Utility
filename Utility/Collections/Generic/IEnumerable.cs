@@ -14,5 +14,17 @@ namespace System.Collections.Generic
                 action(item);
             }
         }
+
+        public static IEnumerable<T> RecursiveSelect<T>(this T parent, Func<T, IEnumerable<T>> getChildren)
+        {
+            foreach (T child in getChildren(parent))
+            {
+                yield return child;
+                foreach (T grandChild in child.RecursiveSelect(getChildren))
+                {
+                    yield return grandChild;
+                }
+            }
+        }
     }
 }

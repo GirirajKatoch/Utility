@@ -32,7 +32,7 @@ namespace Utility.Windows.Forms
             {
                 DateTime day = (DateTime)dataBoundItem;
 
-                bool found = nodes.Any(r => r.Tag is DateTime && ((DateTime)r.Tag).ToDay() == day);
+                bool found = nodes.Any(r => r.Tag is DateTime && ((DateTime)r.Tag).Date == day);
 
                 return found;
             }
@@ -48,7 +48,7 @@ namespace Utility.Windows.Forms
             {
                 DateTime day = (DateTime)dataBoundItem;
 
-                TreeNode node = nodes.FirstOrDefault(r => r.Tag is DateTime && ((DateTime)r.Tag).ToDay() == day);
+                TreeNode node = nodes.FirstOrDefault(r => r.Tag is DateTime && ((DateTime)r.Tag).Date == day);
 
                 return node;
             }

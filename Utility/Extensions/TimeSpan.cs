@@ -29,6 +29,11 @@ namespace System
                 nice += " " + timeSpan.Seconds.ToString() + "s";
             }
 
+            if (String.IsNullOrWhiteSpace(nice))
+            {
+                nice = "0s";
+            }
+
             return nice.Trim();
         }
     }
